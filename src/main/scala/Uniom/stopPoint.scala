@@ -1,3 +1,5 @@
+package Uniom
+
 import java.util.Date
 
 class stopPoint(plng:Double,plat:Double,pdStart:Date,pdEnd:Date,pattri:String) extends Serializable {

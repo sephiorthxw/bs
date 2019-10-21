@@ -1,9 +1,4 @@
-import java.util.{Calendar, Date}
-
-import org.apache.spark.{SparkConf, SparkContext}
-
-import scala.collection.mutable.ArrayBuffer
-import scala.util.control.Breaks
+package Uniom
 
 class feature {
 
@@ -27,7 +22,7 @@ class feature {
   /*
     出行时间
    */
-  def moveTime(line:(String, Iterable[stopPoint])): (String, Long) ={
+  def moveTime(line:(String, Iterable[stopPoint])): (String, Double) ={
     var res=0L
     val ele=line._2.toArray.sortBy(x=>x.dStart)
     val length=ele.length
@@ -41,7 +36,7 @@ class feature {
         val etime=ele(i+1).dEnd.getTime
         res=res+(etime-stime)
       }
-      (line._1,res)
+      (line._1,res.toDouble)
     }
 
 
@@ -145,8 +140,8 @@ class feature {
                   line2:(String, Iterable[stopPoint]))={
 
 
-    var ele1=new Array[ArrayBuffer[Double]](144)
-    var ele2=new Array[ArrayBuffer[Double]](144)
+    var ele1=new Array[scala.collection.mutable.ArrayBuffer[Double]](144)
+    var ele2=new Array[scala.collection.mutable.ArrayBuffer[Double]](144)
 
     for(s<-ele1)
     {
@@ -187,8 +182,8 @@ class feature {
 
     }
 
-    var eleBuffer1=new ArrayBuffer[ArrayBuffer[Double]]()
-    var eleBuffer2=new ArrayBuffer[ArrayBuffer[Double]]()
+    var eleBuffer1=new scala.collection.mutable.ArrayBuffer[scala.collection.mutable.ArrayBuffer[Double]]()
+    var eleBuffer2=new scala.collection.mutable.ArrayBuffer[scala.collection.mutable.ArrayBuffer[Double]]()
 
     for(i<-0 to 143)
     {
@@ -200,9 +195,9 @@ class feature {
     }
 
     val l=eleBuffer1.length+1
-    var dp = new Array[ArrayBuffer[Int]](l)
+    var dp = new Array[scala.collection.mutable.ArrayBuffer[Int]](l)
     for(i <- 0 until dp.length){
-      dp(i) = new ArrayBuffer[Int](l)
+      dp(i) = new scala.collection.mutable.ArrayBuffer[Int](l)
     }
 
     for(i <- 0 until l-1)
@@ -299,7 +294,7 @@ class feature {
     val clng=coord._1
     val clat=coord._2
 
-    var loop1=new Breaks
+    var loop1=scala.util.control.Breaks
     loop1.breakable {
       for (l <- line) {
         rlng = l._1
@@ -325,7 +320,7 @@ class feature {
         val virtualLLat=clat-0.0018
 
        //判断扩充后的区域是否与学校区域有交集
-        var loop2=new Breaks
+        var loop2=new scala.util.control.Breaks
         loop2.breakable{
             for(l<-line)
               {
@@ -353,27 +348,29 @@ class feature {
     val tmpC = tmp(0).dStart
 
 
-    val tmpTime = Calendar.getInstance()
+    val tmpTime = java.util.Calendar.getInstance()
     tmpTime.setTime(tmpC)
+    
+    
 
-    val resi1STime = Calendar.getInstance()
-    val resi1ETime = Calendar.getInstance()
-    resi1STime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 0, 0, 0)
-    resi1ETime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 7, 50, 0)
+    val resi1STime = java.util.Calendar.getInstance()
+    val resi1ETime = java.util.Calendar.getInstance()
+    resi1STime.set(tmpTime.get(java.util.Calendar.YEAR), tmpTime.get(java.util.Calendar.MONTH), tmpTime.get(java.util.Calendar.DAY_OF_MONTH), 0, 0, 0)
+    resi1ETime.set(tmpTime.get(java.util.Calendar.YEAR), tmpTime.get(java.util.Calendar.MONTH), tmpTime.get(java.util.Calendar.DAY_OF_MONTH), 7, 50, 0)
 
 
-    val resi2STime = Calendar.getInstance()
-    val resi2ETime = Calendar.getInstance()
-    resi2STime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 21, 0, 0)
-    resi2ETime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 23, 50, 0)
+    val resi2STime = java.util.Calendar.getInstance()
+    val resi2ETime = java.util.Calendar.getInstance()
+    resi2STime.set(tmpTime.get(java.util.Calendar.YEAR), tmpTime.get(java.util.Calendar.MONTH), tmpTime.get(java.util.Calendar.DAY_OF_MONTH), 21, 0, 0)
+    resi2ETime.set(tmpTime.get(java.util.Calendar.YEAR), tmpTime.get(java.util.Calendar.MONTH), tmpTime.get(java.util.Calendar.DAY_OF_MONTH), 23, 50, 0)
 
     val resiInterval=(resi2ETime.getTimeInMillis-resi2STime.getTimeInMillis)+(resi1ETime.getTimeInMillis-resi1STime.getTimeInMillis)
 
 
-    val workSTime = Calendar.getInstance()
-    val workETime = Calendar.getInstance()
-    workSTime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 8, 0, 0)
-    workETime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 20, 50, 0)
+    val workSTime = java.util.Calendar.getInstance()
+    val workETime = java.util.Calendar.getInstance()
+    workSTime.set(tmpTime.get(java.util.Calendar.YEAR), tmpTime.get(java.util.Calendar.MONTH), tmpTime.get(java.util.Calendar.DAY_OF_MONTH), 8, 0, 0)
+    workETime.set(tmpTime.get(java.util.Calendar.YEAR), tmpTime.get(java.util.Calendar.MONTH), tmpTime.get(java.util.Calendar.DAY_OF_MONTH), 20, 50, 0)
 
 
     val workInterval=workETime.getTimeInMillis-workSTime.getTimeInMillis
@@ -385,8 +382,8 @@ class feature {
 
     for(l<-line._2)
     {
-      val stime = Calendar.getInstance()
-      val etime = Calendar.getInstance()
+      val stime = java.util.Calendar.getInstance()
+      val etime = java.util.Calendar.getInstance()
 
 
 
@@ -454,34 +451,34 @@ class feature {
        val movTime=moveTime(line)
        val hwRate=homeWorkRate(line)
        val moveDis=dis(line)
-      (inOutHomeTime._1,inOutHomeTime._2,movTime._2,hwRate._1,hwRate._2,moveDis._2)
+       val res=Array(inOutHomeTime._1,inOutHomeTime._2,movTime._2,hwRate._1,hwRate._2,moveDis._2)
+       res
   }
 
 
-
-  def main()={
-     val conf=new SparkConf().setAppName("test")
-     val sc=new SparkContext(conf)
-     var rdd1=sc.textFile("hdfs://bigdata01:9000/home/xw/test/2014moblieData/{[1-5]}.csv")
-     var a=3
-     var rdd2=rdd1.map{
-       x=>
-           val ele=x.split(",")
-           val id=ele(0)
-           val lng=ele(1).toDouble
-           val lat=ele(2).toDouble
-           val sdate=new Date(ele(3))
-           val edate=new Date(ele(4))
-           val kind=ele(5)
-           (id,lng,lat,sdate,edate,kind)
-         }.map(x=>(x._1,x)).groupByKey().map{
-       x=>
-       var ele=x._2.map(x=>(x._4.getDay,x)).groupBy(x=>x._1)
-         (x._1,ele)
-     }
-
-
-  }
+//  def main()={
+//     val conf=new SparkConf().setAppName("test")
+//     val sc=new SparkContext(conf)
+//     var rdd1=sc.textFile("hdfs://bigdata01:9000/home/xw/test/2014moblieData/{[1-5]}.csv")
+//     var a=3
+//     var rdd2=rdd1.map{
+//       x=>
+//           val ele=x.split(",")
+//           val id=ele(0)
+//           val lng=ele(1).toDouble
+//           val lat=ele(2).toDouble
+//           val sdate=new Date(ele(3))
+//           val edate=new Date(ele(4))
+//           val kind=ele(5)
+//           (id,lng,lat,sdate,edate,kind)
+//         }.map(x=>(x._1,x)).groupByKey().map{
+//       x=>
+//       var ele=x._2.map(x=>(x._4.getDay,x)).groupBy(x=>x._1)
+//         (x._1,ele)
+//     }
+//
+//
+//  }
 
 
 

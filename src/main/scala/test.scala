@@ -3,6 +3,8 @@ import java.text.SimpleDateFormat
 import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 import java.util.Date
 
+import Uniom.stopPoint
+
 import scala.collection.mutable
 import scala.io.Source
 import scala.util.control.Breaks
@@ -286,7 +288,7 @@ object test {
   }
 
   case class cellData(id:String,date: Date,lng:Double,lat:Double)
- // case class stopPoint(lng:Double,lat:Double,dStart:Date,dEnd:Date,attri:String)
+ // case class Uniom.stopPoint(lng:Double,lat:Double,dStart:Date,dEnd:Date,attri:String)
   case class movePoint(lng:Double,lat:Double,dmove:Date)
 
 

@@ -28,7 +28,6 @@ object testSample {
 
     val groupData=ele.groupBy(x=>x._1).filter(x=>start.filterTime(x)).map(x=>start.mergeData(x)).map(x=>start.divUser(x._1,x._2.toIterable))
 
-
 //    val t1=groupData.filter(x=>x._3.equals("preciseStu")).map(x=>(x._1,x._2)).flatMap(x=>x._2)
 //
 //    for(l<-t1)
