@@ -7,6 +7,8 @@ import java.util.{Calendar, Date}
 import JZLocationConverter.{LatLng,wgs84ToGcj02}
 import org.apache.spark.{SparkConf, SparkContext}
 
+import org.apache.spark.mllib
+
 import scala.collection.mutable
 import scala.io.Source
 import scala.util.control.Breaks

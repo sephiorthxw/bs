@@ -1,4 +1,4 @@
-import java.util.Date
+import java.util.{Calendar, Date}
 
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -48,28 +48,28 @@ class feature {
   }
 
 
-  /*
-    工作时间
-   */
-
-  def workTime(line:(String, Iterable[(String, Double, Double, java.util.Date, java.util.Date,String)]))={
-    var resWork=0L
-    var resHome=0L
-    for(s<-line._2)
-    {
-      if(s._6.equals("work"))
-      {
-        resWork=resWork+(s._5.getTime-s._4.getTime)
-      }
-
-      if(s._6.equals("home"))
-      {
-        resHome=resHome+(s._5.getTime-s._4.getTime)
-      }
-    }
-
-    (line._1,resWork,resHome)
-  }
+//  /*
+//    工作时间
+//   */
+//
+//  def workTime(line:(String, Iterable[(String, Double, Double, java.util.Date, java.util.Date,String)]))={
+//    var resWork=0L
+//    var resHome=0L
+//    for(s<-line._2)
+//    {
+//      if(s._6.equals("work"))
+//      {
+//        resWork=resWork+(s.lat.getTime-s.lng.getTime)
+//      }
+//
+//      if(s._6.equals("home"))
+//      {
+//        resHome=resHome+(s.lat.getTime-s.lng.getTime)
+//      }
+//    }
+//
+//    (line._1,resWork,resHome)
+//  }
 
   def judgeInOut(line:(String, Iterable[stopPoint]))={
     val ele=line._2.toArray.sortBy(x=>x.dStart)
@@ -347,6 +347,117 @@ class feature {
 
   }
 
+  def homeWorkRate(line:(String,Iterable[stopPoint])):(Double,Double) =
+  {
+    val tmp = line._2.toArray
+    val tmpC = tmp(0).dStart
+
+
+    val tmpTime = Calendar.getInstance()
+    tmpTime.setTime(tmpC)
+
+    val resi1STime = Calendar.getInstance()
+    val resi1ETime = Calendar.getInstance()
+    resi1STime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 0, 0, 0)
+    resi1ETime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 7, 50, 0)
+
+
+    val resi2STime = Calendar.getInstance()
+    val resi2ETime = Calendar.getInstance()
+    resi2STime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 21, 0, 0)
+    resi2ETime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 23, 50, 0)
+
+    val resiInterval=(resi2ETime.getTimeInMillis-resi2STime.getTimeInMillis)+(resi1ETime.getTimeInMillis-resi1STime.getTimeInMillis)
+
+
+    val workSTime = Calendar.getInstance()
+    val workETime = Calendar.getInstance()
+    workSTime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 8, 0, 0)
+    workETime.set(tmpTime.get(Calendar.YEAR), tmpTime.get(Calendar.MONTH), tmpTime.get(Calendar.DAY_OF_MONTH), 20, 50, 0)
+
+
+    val workInterval=workETime.getTimeInMillis-workSTime.getTimeInMillis
+
+
+    var homeTime=0L
+    var workTime=0L
+    var work2Time=0L
+
+    for(l<-line._2)
+    {
+      val stime = Calendar.getInstance()
+      val etime = Calendar.getInstance()
+
+
+
+      stime.setTime(l.dStart)
+      etime.setTime(l.dEnd)
+      // todo 居住区范围
+      if((l.lng>116.33531&&l.lng<116.33977&&l.lat>39.97503&&l.lat<39.97762)||(l.lng>116.33804&&l.lng<116.34204&&l.lat>39.979&&l.lat<39.98515)) {
+        if (stime.before(resi1ETime)) {
+          if (etime.before(resi1ETime))
+            homeTime = homeTime + (etime.getTimeInMillis - stime.getTimeInMillis)
+          else
+            homeTime = homeTime + (resi1ETime.getTimeInMillis - stime.getTimeInMillis)
+        }
+        else if (etime.after(resi2STime)) {
+          if (stime.before(resi2STime)) {
+            homeTime = homeTime + (etime.getTimeInMillis - resi2STime.getTimeInMillis)
+          }
+          else {
+            homeTime = homeTime + (etime.getTimeInMillis - stime.getTimeInMillis)
+          }
+
+        }
+      }
+
+      // todo 工作区区范围
+      if((l.lng>116.3418&&l.lng<116.3497&&l.lat>39.9776&&l.lat<39.9854))
+      {
+        if(stime.after(workSTime)&&etime.before(workETime))
+          workTime=workTime+(etime.getTimeInMillis-stime.getTimeInMillis)
+        else if(stime.before(workSTime)&&etime.after(workETime))
+          workTime=workTime+(workETime.getTimeInMillis-workSTime.getTimeInMillis)
+        else if(stime.before(workSTime)&&etime.after(workSTime)&&etime.before(workETime))
+          workTime=workTime+(etime.getTimeInMillis-workSTime.getTimeInMillis)
+        else if(stime.before(workETime)&&stime.after(workSTime)&&etime.after(workETime))
+          workTime=workTime+(workETime.getTimeInMillis-stime.getTimeInMillis)
+      }
+
+      if((l.lng>116.3406&&l.lng<116.3493&&l.lat>39.9746&&l.lat<39.9777))
+      {
+        if(stime.after(workSTime)&&etime.before(workETime))
+          work2Time=work2Time+(etime.getTimeInMillis-stime.getTimeInMillis)
+        else if(stime.before(workSTime)&&etime.after(workETime))
+          work2Time=work2Time+(workETime.getTimeInMillis-workSTime.getTimeInMillis)
+        else if(stime.before(workSTime)&&etime.after(workSTime)&&etime.before(workETime))
+          work2Time=work2Time+(etime.getTimeInMillis-workSTime.getTimeInMillis)
+        else if(stime.before(workETime)&&stime.after(workSTime)&&etime.after(workETime))
+          work2Time=work2Time+(workETime.getTimeInMillis-stime.getTimeInMillis)
+      }
+
+    }
+
+    val homeRate=homeTime.toDouble/resiInterval.toDouble
+
+    val workRate=workTime.toDouble/workInterval.toDouble
+
+    val work2Rate=work2Time.toDouble/workInterval.toDouble
+
+
+    (homeRate,workRate+work2Rate)
+  }
+
+  def calcOneDayFeature(line:(String,Iterable[stopPoint]))={
+
+       val inOutHomeTime=inOutTime(line)
+       val movTime=moveTime(line)
+       val hwRate=homeWorkRate(line)
+       val moveDis=dis(line)
+      (inOutHomeTime._1,inOutHomeTime._2,movTime._2,hwRate._1,hwRate._2,moveDis._2)
+  }
+
+
 
   def main()={
      val conf=new SparkConf().setAppName("test")
@@ -370,23 +481,6 @@ class feature {
      }
 
 
-  }
-
-
-  def calcFeature(line:(String,Map[Int,Iterable[(String, Double, Double, java.util.Date, java.util.Date,String)]]))={
-
-     val inOutTime=new ArrayBuffer[(Double,Double)]()
-     val distance=new ArrayBuffer[Double]()
-     val freq=new ArrayBuffer[Double]()
-
-
-
-
-     for(key<-line._2.keySet)
-       {
-           val ele=line._2.get(key)
-
-       }
   }
 
 
