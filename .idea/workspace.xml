@@ -7,156 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d759ca0-c4be-4af9-bf1a-c13b18e398c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/untitled1_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/TryClassify.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/TryClassify.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/feature.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Uniom/feature.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/firstCluster.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/stopPoint.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Uniom/stopPoint.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/test.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/testSample.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/testSample.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$6$$anonfun$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$6$$anonfun$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$calcFeature$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$dis$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$isSchool$1$$anonfun$apply$mcV$sp$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$isSchool$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$isSchool$2$$anonfun$apply$mcV$sp$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$isSchool$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$moveTime$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$routeSimlar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$routeSimlar$2$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$routeSimlar$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$routeSimlar$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$routeSimlar$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$routeSimlar$5$$anonfun$apply$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$routeSimlar$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$routeSimlar$6$$anonfun$apply$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$routeSimlar$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$routeSimlar$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature$$anonfun$workTime$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/feature.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$10$$anonfun$apply$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$11.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$12$$anonfun$apply$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$12.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$13.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$14.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$15.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$16.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$17.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$18.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$4$$anonfun$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$4$$anonfun$apply$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$activeData$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$divUser$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$main$1$$anonfun$apply$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$main$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$main$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$retrieve_neighborsT$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$retrieve_neighborsT$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$retrieve_neighborsT$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$retrieve_neighborsT$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$retrieve_neighborsT$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$tDbscanAndJudgeAttri$1$$anonfun$apply$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$tDbscanAndJudgeAttri$1$$anonfun$apply$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$$anonfun$tDbscanAndJudgeAttri$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$cellData$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$cellData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$movePoint$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$movePoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster$stopPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/firstCluster.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/stopPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$8$$anonfun$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$8$$anonfun$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$8$$anonfun$apply$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$8$$anonfun$apply$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$calcRate$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$calcRate$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$calcRate$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$calcRate$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$conVert$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$conVert$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$deleteShakeV3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$deleteShakeV3$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$dis$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$dis$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$div$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$div$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$judgeUserV1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$judgeUserV1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$judgeUserV2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$judgeUserV2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$judgebh$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$judgebh$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$moveTime$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$moveTime$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$resConv$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$retrieve_neighborsST$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$retrieve_neighborsST$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$retrieve_neighborsT$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$retrieve_neighborsT$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$retrieve_neighborsT$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$retrieve_neighborsT$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$retrieve_neighborsT$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$retrieve_neighborsT$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$retrieve_neighborsT$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$retrieve_neighborsT$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$2$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$2$$anonfun$apply$mcVI$sp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$5$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$5$$anonfun$apply$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$6$$anonfun$apply$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$6$$anonfun$apply$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$routeSimlar$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$sortByTime$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$sortByTime$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndHW$1$$anonfun$apply$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndHW$1$$anonfun$apply$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndHW$1$$anonfun$apply$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndHW$1$$anonfun$apply$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndHW$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndHW$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndJudgeAttri$1$$anonfun$apply$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndJudgeAttri$1$$anonfun$apply$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndJudgeAttri$1$$anonfun$apply$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndJudgeAttri$1$$anonfun$apply$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndJudgeAttri$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$tDbscanAndJudgeAttri$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$workTime$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$$anonfun$workTime$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$cellData$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$cellData$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$cellData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$cellData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$movePoint$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$movePoint$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$movePoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$movePoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$sPoint$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$sPoint$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test$sPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test$sPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/testSample$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/testSample$.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -196,11 +47,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
               <caret line="9" column="67" lean-forward="true" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/META-INF/MANIFEST.MF">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -222,15 +82,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/test.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18836">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -324,6 +175,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/feature.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/firstCluster.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Uniom/firstCluster.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/META-INF/MANIFEST.MF" />
       </list>
     </option>
   </component>
@@ -502,14 +354,27 @@
       <option name="project" value="LOCAL" />
       <updated>1571623930356</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first commit">
+      <created>1571657058476</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571657058476</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2019/10/21 commit">
+      <created>1571657167063</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571657167064</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28051737" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28051737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -523,7 +388,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49924356" weight="0.37300178" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49924356" visible="true" weight="0.37300178" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.4409836" />
@@ -583,7 +448,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="2019/10/21 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019/10/21 commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -773,6 +639,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="67" lean-forward="true" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
