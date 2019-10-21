@@ -352,7 +352,7 @@ class feature {
      val conf=new SparkConf().setAppName("test")
      val sc=new SparkContext(conf)
      var rdd1=sc.textFile("hdfs://bigdata01:9000/home/xw/test/2014moblieData/{[1-5]}.csv")
-
+     var a=3
      var rdd2=rdd1.map{
        x=>
            val ele=x.split(",")
