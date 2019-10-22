@@ -541,13 +541,10 @@ object firstCluster {
 //          }
 //        }
    // .setAppName("test").setMaster("spark://master01:7077")
-       val conf1 = new SparkConf().setAppName("test").setMaster("spark://bigdata01:7077")
+       val conf1 = new SparkConf().setAppName("test").setMaster("spark://bigdata02:7077")
        val sc = new SparkContext(conf1)
 
        val ele=sc.textFile("hdfs://bigdata01:9000/home/xw/bh603").map(x=>parseDataForTest(x))
-
-
-
 
        val out=ele.groupBy(x=>x._1).map{
          x=>
