@@ -288,7 +288,7 @@ object test {
   }
 
   case class cellData(id:String,date: Date,lng:Double,lat:Double)
- // case class Uniom.stopPoint(lng:Double,lat:Double,dStart:Date,dEnd:Date,attri:String)
+ // case class t.stopPoint(lng:Double,lat:Double,dStart:Date,dEnd:Date,attri:String)
   case class movePoint(lng:Double,lat:Double,dmove:Date)
 
 

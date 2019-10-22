@@ -14,6 +14,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
+
 object firstCluster {
 
 
@@ -42,7 +43,7 @@ object firstCluster {
     * @param smove
     * @param emove
     */
-  case class movePoint(lng:Double,lat:Double,smove:Date, emove:Date){
+  case class movePoint(lng:Double,lat:Double,smove:Date, emove:Date) extends Serializable {
     override def toString: String = {
       lng+","+lat+","+ smove.toString() + "," + emove.toString()
     }
@@ -540,10 +541,10 @@ object firstCluster {
 //          }
 //        }
    // .setAppName("test").setMaster("spark://master01:7077")
-       val conf1 = new SparkConf().setAppName("test").setMaster("spark://master01:7077")
+       val conf1 = new SparkConf().setAppName("test").setMaster("spark://bigdata01:7077")
        val sc = new SparkContext(conf1)
 
-       val ele=sc.textFile("hdfs://dcoshdfs/private_data/useryjj/xw/bh603").map(x=>parseDataForTest(x))
+       val ele=sc.textFile("hdfs://bigdata01:9000/home/xw/bh603").map(x=>parseDataForTest(x))
 
 
 
@@ -594,6 +595,8 @@ object firstCluster {
     }
 
     val model = DecisionTree.trainClassifier(data,3,Map[Int,Int](),"gini",4,100)
+
+   model.toDebugString
 
     val metrics= getMetrics(model,data)
 

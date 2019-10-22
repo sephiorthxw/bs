@@ -1,7 +1,6 @@
 package Uniom
 
-class feature {
-
+class feature extends Serializable {
 
   def calcDis(lng1:Double,lat1:Double,lng2:Double,lat2:Double):Double={
     val r=6371393 //地球半径
@@ -43,28 +42,28 @@ class feature {
   }
 
 
-//  /*
-//    工作时间
-//   */
-//
-//  def workTime(line:(String, Iterable[(String, Double, Double, java.util.Date, java.util.Date,String)]))={
-//    var resWork=0L
-//    var resHome=0L
-//    for(s<-line._2)
-//    {
-//      if(s._6.equals("work"))
-//      {
-//        resWork=resWork+(s.lat.getTime-s.lng.getTime)
-//      }
-//
-//      if(s._6.equals("home"))
-//      {
-//        resHome=resHome+(s.lat.getTime-s.lng.getTime)
-//      }
-//    }
-//
-//    (line._1,resWork,resHome)
-//  }
+  //  /*
+  //    工作时间
+  //   */
+  //
+  //  def workTime(line:(String, Iterable[(String, Double, Double, java.util.Date, java.util.Date,String)]))={
+  //    var resWork=0L
+  //    var resHome=0L
+  //    for(s<-line._2)
+  //    {
+  //      if(s._6.equals("work"))
+  //      {
+  //        resWork=resWork+(s.lat.getTime-s.lng.getTime)
+  //      }
+  //
+  //      if(s._6.equals("home"))
+  //      {
+  //        resHome=resHome+(s.lat.getTime-s.lng.getTime)
+  //      }
+  //    }
+  //
+  //    (line._1,resWork,resHome)
+  //  }
 
   def judgeInOut(line:(String, Iterable[stopPoint]))={
     val ele=line._2.toArray.sortBy(x=>x.dStart)
@@ -250,7 +249,7 @@ class feature {
 
 
   def freq(line:(String, Iterable[stopPoint]))={
-      line._2.size.toDouble-1
+    line._2.size.toDouble-1
   }
 
   /*
@@ -280,9 +279,9 @@ class feature {
   }
 
 
- /*
-   判断某个地点旁是否有学校类别的POI
-  */
+  /*
+    判断某个地点旁是否有学校类别的POI
+   */
   def isSchool(coord:(Double,Double),line:Iterable[(Double,Double,Double,Double,Character,Character)])={
     var isInclude=false
     var isOverLap=false
@@ -302,43 +301,43 @@ class feature {
         llng = l._3
         llat = l._4
         if (clng>llng&&clng<rlng&&clat>llat&&clat<llat)
-          {
-              isInclude=true
-              loop1.break()
-          }
+        {
+          isInclude=true
+          loop1.break()
+        }
       }
     }
 
     if(isInclude)
-        true
+      true
     else
     {
-       //将中心坐标上下左右扩充200米
-        val virtualRLng=clng+0.0018
-        val virtualRLat=clat+0.0018
-        val virtualLLng=clng-0.0018
-        val virtualLLat=clat-0.0018
+      //将中心坐标上下左右扩充200米
+      val virtualRLng=clng+0.0018
+      val virtualRLat=clat+0.0018
+      val virtualLLng=clng-0.0018
+      val virtualLLat=clat-0.0018
 
-       //判断扩充后的区域是否与学校区域有交集
-        var loop2=new scala.util.control.Breaks
-        loop2.breakable{
-            for(l<-line)
-              {
-                rlng = l._1
-                rlat = l._2
-                llng = l._3
-                llat = l._4
+      //判断扩充后的区域是否与学校区域有交集
+      var loop2=new scala.util.control.Breaks
+      loop2.breakable{
+        for(l<-line)
+        {
+          rlng = l._1
+          rlat = l._2
+          llng = l._3
+          llat = l._4
 
-                if(judgeIsOverlap(virtualRLng,virtualRLat,virtualLLng,virtualLLat,rlng,rlat,llng,llat))
-                  {
-                    isOverLap=true
-                    loop2.break()
-                  }
-              }
+          if(judgeIsOverlap(virtualRLng,virtualRLat,virtualLLng,virtualLLat,rlng,rlat,llng,llat))
+          {
+            isOverLap=true
+            loop2.break()
+          }
         }
+      }
       isOverLap
 
-     }
+    }
 
   }
 
@@ -350,8 +349,8 @@ class feature {
 
     val tmpTime = java.util.Calendar.getInstance()
     tmpTime.setTime(tmpC)
-    
-    
+
+
 
     val resi1STime = java.util.Calendar.getInstance()
     val resi1ETime = java.util.Calendar.getInstance()
@@ -447,13 +446,14 @@ class feature {
 
   def calcOneDayFeature(line:(String,Iterable[stopPoint]))={
 
-       val inOutHomeTime=inOutTime(line)
-       val movTime=moveTime(line)
-       val hwRate=homeWorkRate(line)
-       val moveDis=dis(line)
-       val res=Array(inOutHomeTime._1,inOutHomeTime._2,movTime._2,hwRate._1,hwRate._2,moveDis._2)
-       res
+    val inOutHomeTime=inOutTime(line)
+    val movTime=moveTime(line)
+    val hwRate=homeWorkRate(line)
+    val moveDis=dis(line)
+    val res=Array(inOutHomeTime._1,inOutHomeTime._2,movTime._2,hwRate._1,hwRate._2,moveDis._2)
+    res
   }
+
 
 
 //  def main()={
