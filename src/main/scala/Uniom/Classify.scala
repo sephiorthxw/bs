@@ -16,10 +16,10 @@ import scala.collection.mutable.ArrayBuffer
 object Classify {
 
 
-  def getMetrics(model:DecisionTreeModel,data:RDD[LabeledPoint]):MulticlassMetrics={
+  def getMetrics(model:org.apache.spark.mllib.tree.model.DecisionTreeModel,data:org.apache.spark.rdd.RDD[org.apache.spark.mllib.regression.LabeledPoint]):org.apache.spark.mllib.evaluation.MulticlassMetrics={
     val predictionsAndLabels = data.map(example => (model.predict(example.features),example.label
     ))
-    new MulticlassMetrics(predictionsAndLabels)
+    new org.apache.spark.mllib.evaluation.MulticlassMetrics(predictionsAndLabels)
   }
 
 

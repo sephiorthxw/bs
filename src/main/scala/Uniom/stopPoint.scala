@@ -2,7 +2,7 @@ package Uniom
 
 import java.util.Date
 
-class stopPoint(plng:Double, plat:Double, pdStart:Date, pdEnd:Date, pattri:String) extends Serializable {
+class stopPoint(plng:Double, plat:Double, pdStart:java.util.Date, pdEnd:java.util.Date, pattri:String) extends Serializable {
   var lng=plng
   var lat=plat
   var dStart=pdStart

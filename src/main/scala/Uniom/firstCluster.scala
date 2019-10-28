@@ -30,7 +30,7 @@ object firstCluster {
     * @param lng
     * @param lat
     */
-  case class cellData(id:String,sdate: Date,edate: Date ,lng:Double,lat:Double) extends Serializable {
+  case class cellData(id:String,sdate: Date,edate: Date ,var lng:Double,var lat:Double) extends Serializable {
     override def toString: String = {
       id + "," + sdate.toString+ "," + edate.toString + "," + lng + "," + lat
     }

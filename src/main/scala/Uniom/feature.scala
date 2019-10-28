@@ -1,7 +1,9 @@
 package Uniom
 
+import java.text.SimpleDateFormat
 import java.util.{Calendar, Date}
 
+import Uniom.firstCluster.cellData
 import org.apache.spark.{SparkConf, SparkContext}
 
 import scala.collection.mutable.ArrayBuffer
@@ -150,14 +152,14 @@ class feature extends Serializable {
 
     for(i<- 0 to 143)
     {
-          val s=new ArrayBuffer[Double](2)
+          val s=new scala.collection.mutable.ArrayBuffer[Double](2)
           s+=0.0
           s+=0.0
          ele1+=s
     }
     for(j<- 0 to 143)
     {
-      val s=new ArrayBuffer[Double](2)
+      val s=new scala.collection.mutable.ArrayBuffer[Double](2)
       s+=0.0
       s+=0.0
       ele2+=s
@@ -625,9 +627,9 @@ class feature extends Serializable {
 
 
   def writeOneWeekData = {
-    val conf=new SparkConf().setAppName("test")
+    val conf=new SparkConf().setAppName("writeData").setMaster("spark://master01:7077")
     val sc=new SparkContext(conf)
-    var rdd1=sc.textFile("hdfs://bigdata01:9000/home/xw/test/2014moblieData/{[1-5]}.csv")
+    var rdd1=sc.textFile("hdfs://dcoshdfs/private_data/useryjj/1Cluster/2019/201906/2019061*/ALLStop")
     var a=3
     var rdd2=rdd1.map{
       x=>
@@ -646,7 +648,7 @@ class feature extends Serializable {
         (x._1,ele)
     }
 
-    val rddFirstFilter=rdd2.filter(x=>firstFilterWeek(x,116.3469,39.9851,116.3321,39.9753))
+    val rddFirstFilter=rdd2.filter(x=>firstFilterWeek(x,116.3717,40.0138,116.2771,39.9434))
 
     rddFirstFilter.map{
       x=>
@@ -662,7 +664,7 @@ class feature extends Serializable {
 
   def markUser(line:(String,Map[Int,Iterable[stopPoint]]))= {
     val ele = line._2
-    val storeKind = new ArrayBuffer[String]()
+    val storeKind = new scala.collection.mutable.ArrayBuffer[String]()
 
     for (l <- ele) {
       storeKind += markUserOneDay((line._1, l._2))
@@ -695,8 +697,8 @@ class feature extends Serializable {
 
 
   def calcOneWeekFeature(line:(String,Map[Int,Iterable[stopPoint]]))={
-      val storeFeature=new ArrayBuffer[Array[Double]]()
-      val res=new ArrayBuffer[Double]()
+      val storeFeature=new scala.collection.mutable.ArrayBuffer[Array[Double]]()
+      val res=new scala.collection.mutable.ArrayBuffer[Double]()
       val ele=line._2
 
     //计算特征值（一周平均值）
@@ -717,10 +719,13 @@ class feature extends Serializable {
          }
     //计算路径相似性
        var similarRate=0.0
-       for(l<- 3 until 7)
+
+      val help=ele.keys.toArray.sortBy(x=>x)
+
+       for(l<- 0 until help.size-1)
          {
-           val a=show(ele.get(l))
-           val b=show(ele.get(l+1))
+           val a=show(ele.get(help(l)))
+           val b=show(ele.get(help(l+1)))
            similarRate=similarRate+routeSimlar((line._1,a),(line._1,b))
          }
 
@@ -733,4 +738,9 @@ class feature extends Serializable {
     case Some(x)=>x
     case None =>null
   }
+
+  def main(args: Array[String]): Unit = {
+
+  }
+
 }
